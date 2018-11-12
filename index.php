@@ -51,8 +51,7 @@ $enviar->emailEnviar("asfaf","facundo@estudiorochayasoc.com.ar","facundo@estudio
 
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination swiper-pagination1">
-        </div>
+        <div class="swiper-pagination swiper-pagination1"></div>
 
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev">
@@ -154,7 +153,6 @@ $enviar->emailEnviar("asfaf","facundo@estudiorochayasoc.com.ar","facundo@estudio
         <div class="row">
             <?php foreach ($servicioArray as $actual): ?>
                 <?php $filter = array("codigo = '$actual[cod]' "); ?>
-                <?php $imagen->set("cod", $actual['cod']); ?>
                 <?php $imagenArray = $imagen->list($filter); ?>
 
                 <div class="col-md-4">
@@ -218,7 +216,6 @@ $enviar->emailEnviar("asfaf","facundo@estudiorochayasoc.com.ar","facundo@estudio
         <div class="row">
             <?php foreach ($novedadArray as $actual): ?>
                 <?php $filter = array("codigo = '$actual[cod]'"); ?>
-                <?php $imagen->set("cod", $actual['cod']); ?>
                 <?php $imagenArray = $imagen->list($filter); ?>
                 <?php $fecha = explode("-",$actual["fecha"]); ?>
                 <?php $fecha = $fecha[2]."/".$fecha[1]."/".$fecha[0]; ?>
@@ -291,7 +288,6 @@ $enviar->emailEnviar("asfaf","facundo@estudiorochayasoc.com.ar","facundo@estudio
             <div class="partner-slides">
                 <?php foreach ($marcasArray as $actual): ?>
                     <?php $filter = array("codigo = '$actual[cod]'"); ?>
-                    <?php $imagen->set("cod", $actual['cod']); ?>
                     <?php $imagenArray = $imagen->list($filter); ?>
                     <?php foreach ($imagenArray as $imgActual): ?>
                         <div class="single-partner-slide">
